@@ -14,7 +14,7 @@ hipB = int(input("Enter you Hip Breadth: "))*10
 shoulderC = int(input("Enter your Shoulder Circumference: "))*10
 waistC = int(input("Enter you Waist Circumference: "))*10
 hipC = int(input("Enter your Hips Circumference: "))*10
-height = int(input("Enter you Height: "))/2.54
+height = int(input("Enter you Height: "))
 
 print(version, gender, bideltoid, hipB, shoulderC, waistC, hipC, height)
 
@@ -25,13 +25,35 @@ elif gender == "m":
 else:
     print("chose m or f (make sure to use lowercase letters and no spaces")
 
-if version == "2":
+if version == "1":
+    if gender == "f":
+        dataset = "ansur1_female.csv"
+    elif gender == "m":
+        dataset = "ansur1_male.csv"
+    else:
+        print("chose m or f (make sure to use lowercase letters and no spaces")
+    bidel = "BIDELTOID_BRTH"
+    hipbreadth = "HIP_BRTH"
+    waist = "WAIST_CIRC_NATURAL"
+    hipcirc = "BUTTOCK_CIRC"
+    shoulder = "SHOULDER_CIRC"
+    heightV = "STATURE"
+    height *= 10
+else:
+    if gender == "f":
+        dataset = "ansur2_female.csv"
+    elif gender == "m":
+        dataset = "ansur2_male.csv"
+    else:
+        print("chose m or f (make sure to use lowercase letters and no spaces")
+    dataset = "ansur2_male.csv"
     bidel = "bideltoidbreadth"
     hipbreadth = "hipbreadth"
     waist = "waistcircumference"
     hipcirc = "buttockcircumference"
     shoulder = "shouldercircumference"
     heightV = "Heightin"
+    height /= 2.54
 
 bideltoid_hipsB_SD, bideltoid_hipsB_A = funcs.avg_and_sd_calc(funcs.ratio_gen(funcs.cords_gen(bidel, hipbreadth, dataset)))
 whr_SD, whr_A = funcs.avg_and_sd_calc(funcs.ratio_gen(funcs.cords_gen(waist, hipcirc, dataset)))
@@ -58,9 +80,15 @@ print(f"Average: {round(waist_shoulder_A, 2)}, SD: {round(waist_shoulder_SD, 2)}
 print(f"Your Shoulder Waist Ratio: {round((shoulderC/waistC), 2)}")
 print(f"You are {round(waist_shoulder_sd_dif, 2)} standard deviations from the average shoulder-waist ratio. ")
 
-print("\n\nHeight")
-print(f"Average: {round((height_A*2.54), 2)}, SD: {round((height_SD*2.54), 2)}. This means that 68% of people fall within a range of {round(((height_A*2.54) - (height_SD*2.54)), 2)} - {round(((height_A*2.54) + (height_SD*2.54)), 2)}")
-print(f"Your Height: {round((height*2.54), 2)}")
-print(f"You are {round(height_sd_dif, 2)} standard deviations from the average height. ")
+if version == "1":
+    print("\n\nHeight")
+    print(f"Average: {round((height_A/10), 2)}, SD: {round((height_SD/10), 2)}. This means that 68% of people fall within a range of {round(((height_A/10) - (height_SD/10)), 2)} - {round(((height_A/10) + (height_SD/10)), 2)}")
+    print(f"Your Height: {round((height/10), 2)}")
+    print(f"You are {round(height_sd_dif, 2)} standard deviations from the average height. ")
+else:
+    print("\n\nHeight")
+    print(f"Average: {round((height_A*2.54), 2)}, SD: {round((height_SD*2.54), 2)}. This means that 68% of people fall within a range of {round(((height_A*2.54) - (height_SD*2.54)), 2)} - {round(((height_A*2.54) + (height_SD*2.54)), 2)}")
+    print(f"Your Height: {round((height*2.54), 2)}")
+    print(f"You are {round(height_sd_dif, 2)} standard deviations from the average height. ")
 
 print(f"\n\nYou are on average {round(((bidel_hipB_sd_dif+whr_sd_dif+waist_shoulder_sd_dif+height_sd_dif)/4),2)} standard deviations from average")
