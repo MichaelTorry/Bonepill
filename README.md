@@ -6,6 +6,8 @@ Things I'm gonna try to add:
 
 -Everything from anthro.cs
 
--Ability to see how many SDs you are from the mean
+-Ability to see how many SDs you are from the median 
 
 -Support for Imperial (I hate americans but I think it would be cool)
+
+-Passoid detector (checks how far from the median you are in a series of ratios and raw measurements)

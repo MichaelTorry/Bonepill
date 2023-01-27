@@ -1,12 +1,10 @@
-import ansur_functions as funcs
+print("All measurements are in cm unless otherwise indicated")
+gender = input("Enter your gender: (m/f/n)")
+bideltoid = input("Enter your Bideltoid Shoulder Breadth: ")
+hipB = input("Enter you Hip Breadth: ")
+shoulderC = input("Enter your Shoulder Circumference: ")
+waistC = input("Enter you Waist Circumference: ")
+hipsC = input("Enter your Hips Circumference: ")
+height = input("Enter you Height: ")
 
-cords = funcs.cords_gen("bideltoidbreadth", "hipbreadth", "ansur2_male.csv")
-
-
-whrlist = []
-for item in cords:
-    whrlist.append(int(item[0])/int(item[1]))
-
-
-sd, avg = funcs.avg_and_sd_calc(whrlist)
-print(f"Average: {round(avg, 3)}, SD: {round(sd, 3)}. This means that 68% of people fall within a range of {round((avg - sd), 3)} - {round((avg + sd), 3)}")
+print(gender, bideltoid, hipB, shoulderC, waistC, hipsC, height)

@@ -1,0 +1,1 @@
+#I'll copy the code from test.py here later but its faster to type python test.py in terminal than this file name

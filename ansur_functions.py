@@ -1,5 +1,5 @@
 import csv
-import numpy as numpy
+import numpy
 
 def cords_gen(measurement1, measurement2, dataset):
     cords = []
