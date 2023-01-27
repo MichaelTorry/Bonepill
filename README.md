@@ -15,3 +15,5 @@ Things I'm gonna try to add:
 UPDATE: PASSOID DETECTOR WORKING
 
 I still need to add support for bust-underbust ratio
+
+If you are having issues running the passoid detector make sure you have numpy installed (you can do this with "pip numpy" in the commandline)
