@@ -1,10 +1,11 @@
 import ansur_functions as funcs
 
 print("\n\n\nPassoide detector, enter your measurements and you will be given a passing score.")
-print("The ratios measured are: hips-waist, hips-shoulder, shoulder-waist, and a raw value of height")
-print("Closer to zero means closer to the average (passing)")
-print("However lower scores are generally more feminine, and higher ones are more masculine")
-print("You should also note that scores are reletive to cis people of that gender\n\n")
+print("The ratios measured are: hips-waist, hips-shoulder, shoulder-waist, and a raw value of height.")
+print("Closer to zero means closer to the average (passing).")
+print("However lower scores are generally more feminine, and higher ones are more masculine.")
+print("You should also note that scores are reletive to cis people of that gender.")
+print("It is recommended that you use ANSUR 2 as it is more recent.\n\n")
 
 print("All measurements are in cm unless otherwise indicated\n\n")
 version = input("Which version of ANSUR would you like to use: (1/2) ")
