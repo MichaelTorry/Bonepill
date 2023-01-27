@@ -89,5 +89,5 @@ else:
 
 print(f"\n\nWith weighting, you are {round(( (bidel_hipB_sd_dif*.3) + (whr_sd_dif*0.3) + (waist_shoulder_sd_dif*0.3) + (height_sd_dif*0.1) ),2)} standard deviations from average")
 print("A score under within 1 point of 0 means you probably pass. If it is negative you are more feminine than the average, positive is more masculine")
-print("ABout the weighting: I gave height a lower weight because if you would otherwise pass, height won't clock you")
+print("About the weighting: I gave height a lower weight because if you would otherwise pass, height won't clock you")
 print("But if you otherwise clocky, height can be an issue")
