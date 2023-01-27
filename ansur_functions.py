@@ -1,4 +1,5 @@
 import csv
+import numpy as numpy
 
 def cordsgen(measurement1, measurement2):
     malecords = []
@@ -30,3 +31,5 @@ def cordsgen(measurement1, measurement2):
     return cords
 
 
+def SDcalc(inputlist):
+    return numpy.std(inputlist)
