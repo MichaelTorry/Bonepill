@@ -16,14 +16,9 @@ waistC = int(input("Enter you Waist Circumference: "))*10
 hipC = int(input("Enter your Hips Circumference: "))*10
 height = int(input("Enter you Height: "))
 
+print("debug")
 print(version, gender, bideltoid, hipB, shoulderC, waistC, hipC, height)
 
-if gender == "f":
-    dataset = "ansur2_female.csv"
-elif gender == "m":
-    dataset = "ansur2_male.csv"
-else:
-    print("chose m or f (make sure to use lowercase letters and no spaces")
 
 if version == "1":
     if gender == "f":
@@ -42,11 +37,12 @@ if version == "1":
 else:
     if gender == "f":
         dataset = "ansur2_female.csv"
+        print(dataset, gender)
+        print("--------------------------------------------------")
     elif gender == "m":
         dataset = "ansur2_male.csv"
     else:
         print("chose m or f (make sure to use lowercase letters and no spaces")
-    dataset = "ansur2_male.csv"
     bidel = "bideltoidbreadth"
     hipbreadth = "hipbreadth"
     waist = "waistcircumference"
@@ -91,4 +87,4 @@ else:
     print(f"Your Height: {round((height*2.54), 2)}")
     print(f"You are {round(height_sd_dif, 2)} standard deviations from the average height. ")
 
-print(f"\n\nYou are on average {round(((bidel_hipB_sd_dif+whr_sd_dif+waist_shoulder_sd_dif+height_sd_dif)/4),2)} standard deviations from average")
+print(f"\n\nYou have a weighted passing score of {round(( (bidel_hipB_sd_dif*.3) + (whr_sd_dif*0.3) + (waist_shoulder_sd_dif*0.3) + (height_sd_dif*0.1) ),2)} standard deviations from average")

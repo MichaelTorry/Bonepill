@@ -91,4 +91,4 @@ else:
     print(f"Your Height: {round((height*2.54), 2)}")
     print(f"You are {round(height_sd_dif, 2)} standard deviations from the average height. ")
 
-print(f"\n\nYou are on average {round(((bidel_hipB_sd_dif+whr_sd_dif+waist_shoulder_sd_dif+height_sd_dif)/4),2)} standard deviations from average")
+print(f"\n\nYou have a weighted passing score of {round(((bidel_hipB_sd_dif*.03)+(whr_sd_dif*0.3)+(waist_shoulder_sd_dif0.3)+(height_sd_dif0.1)),2)} standard deviations from average")
