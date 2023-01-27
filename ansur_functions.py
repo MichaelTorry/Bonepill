@@ -1,35 +1,26 @@
 import csv
 import numpy as numpy
 
-def cordsgen(measurement1, measurement2):
-    malecords = []
-    with open ("ansur-female.csv") as ansur:
-        csvfile = csv.reader(ansur)
-        measurements = next(csvfile)
-        loc1 = measurements.index(measurement1)
-        loc2 = measurements.index(measurement2)
-        for row in csvfile:
-            temp = []
-            temp.append(row[loc1])
-            temp.append(row[loc2])
-            malecords.append(temp)
-    femalecords = []
-    with open ("ansur-female.csv") as ansur:
-        csvfile = csv.reader(ansur)
-        measurements = next(csvfile)
-        loc1 = measurements.index(measurement1)
-        loc2 = measurements.index(measurement2)
-        for row in csvfile:
-            temp = []
-            temp.append(row[loc1])
-            temp.append(row[loc2])
-            femalecords.append(temp)
+def cords_gen(measurement1, measurement2, dataset):
     cords = []
-    cords.append(femalecords)
-    cords.append(malecords)
-
+    with open (dataset) as ansur:
+        csvfile = csv.reader(ansur)
+        measurements = next(csvfile)
+        loc1 = measurements.index(measurement1)
+        loc2 = measurements.index(measurement2)
+        for row in csvfile:
+            temp = []
+            temp.append(row[loc1])
+            temp.append(row[loc2])
+            cords.append(temp)
+    
     return cords
 
 
-def SDcalc(inputlist):
-    return numpy.std(inputlist)
+def avg_and_sd_calc(inputlist):
+    sd = numpy.std(inputlist)
+    total = 0
+    for item in inputlist:
+        total += item
+    avg = total/len(inputlist)
+    return sd, avg
