@@ -11,3 +11,5 @@ Things I'm gonna try to add:
 -Support for Imperial (I hate americans but I think it would be cool)
 
 -Passoid detector (checks how far from the median you are in a series of ratios and raw measurements)
+UPDATE: PASSOID DETECTOR WORKING
+I still need to add support for bust-underbust ratio
