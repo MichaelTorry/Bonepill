@@ -1,11 +1,12 @@
 import ansur_functions as funcs
 
-cords = funcs.cords_gen("bideltoidbreadth", "hipbreadth", "ansur2_male.csv")
+cords = funcs.cords_gen("shouldercircumference", "waistcircumference", "ansur2_male.csv")
 
+list1 = funcs.ratio_gen(cords)
 
-whrlist = []
-for item in cords:
-    whrlist.append(int(item[0])/int(item[1]))
+#list1 = funcs.list_gen("Heightin", "ansur2_male.csv")
 
-sd, avg = funcs.avg_and_sd_calc(whrlist)
-print(f"Average: {round(avg, 3)}, SD: {round(sd, 3)}. This means that 68% of people fall within a range of {round((avg - sd), 3)} - {round((avg + sd), 3)}")
+sd, avg = funcs.avg_and_sd_calc(list1)
+#avg *= 2.54
+#sd *= 2.54
+print(f"\nAverage: {round(avg, 2)}, SD: {round(sd, 2)}. This means that 68% of people fall within a range of {round((avg - sd), 2)} - {round((avg + sd), 2)}")
