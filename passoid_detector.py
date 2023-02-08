@@ -10,12 +10,12 @@ print("It is recommended that you use ANSUR 2 as it is more recent.\n\n")
 print("All measurements are in cm unless otherwise indicated\n\n")
 version = input("Which version of ANSUR would you like to use: (1/2) ")
 gender = input("Enter your gender: (m/f) ")
-bideltoid = int(input("Enter your Bideltoid Shoulder Breadth: "))*10
-hipB = int(input("Enter you Hip Breadth: "))*10
-shoulderC = int(input("Enter your Shoulder Circumference: "))*10
-waistC = int(input("Enter you Waist Circumference: "))*10
-hipC = int(input("Enter your Hips Circumference: "))*10
-height = int(input("Enter you Height: "))
+bideltoid = float(input("Enter your Bideltoid Shoulder Breadth: "))*10
+hipB = float(input("Enter you Hip Breadth: "))*10
+shoulderC = float(input("Enter your Shoulder Circumference: "))*10
+waistC = float(input("Enter you Waist Circumference: "))*10
+hipC = float(input("Enter your Hips Circumference: "))*10
+height = float(input("Enter you Height: "))
 
 print("debug")
 print(version, gender, bideltoid, hipB, shoulderC, waistC, hipC, height)

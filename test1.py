@@ -4,12 +4,13 @@
 
 import ansur_functions as funcs
 
-'''list1 = funcs.ratio_gen(funcs.cords_gen("bideltoidbreadth", "hipbreadth", "ansur2_male.csv"))
+list1 = funcs.ratio_gen(funcs.cords_gen("buttockcircumference", "hipbreadth", "ansur2_female.csv"))
 
 sd, avg = funcs.avg_and_sd_calc(list1)
 
-print(f"\nAverage: {round(avg, 2)}, SD: {round(sd, 2)}. This means that 68% of people fall within a range of {round((avg - sd), 2)} - {round((avg + sd), 2)}")
+print(f"\nAverage: {round(avg, 4)}, SD: {round(sd, 4)}. This means that 68% of people fall within a range of {round((avg - sd), 4)} - {round((avg + sd), 4)}")
 
+'''
 sd, avg = funcs.avg_and_sd_calc(funcs.ratio_gen(funcs.cords_gen("BIDELTOID_BRTH", "HIP_BRTH", "ansur1_male.csv")))
 
 print(f"\nAverage: {round(avg, 2)}, SD: {round(sd, 2)}. This means that 68% of people fall within a range of {round((avg - sd), 2)} - {round((avg + sd), 2)}")
